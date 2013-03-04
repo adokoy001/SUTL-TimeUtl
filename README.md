@@ -1,6 +1,7 @@
-Perl Module [ SUTL-TimeUtl ]
+SUTL-TimeUtl [Perl Module]
+============================
 
-Simplified Utils --- Time Util
+Simplified Date and Time Utility Module for Perl
 
 
 FEATURES
@@ -12,5 +13,3 @@ FEATURES
 - Depends on Time::HiRes, Time::Local.
 
 AUTHOR: Toshiaki Yokoda
-  Okinawa.Japan
-
