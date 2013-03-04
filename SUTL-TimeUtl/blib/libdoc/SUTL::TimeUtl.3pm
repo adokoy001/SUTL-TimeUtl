@@ -139,40 +139,35 @@
 .if n .ad l
 .nh
 .SH "NAME"
-SUTL::TimeUtl \- [One line description of module's purpose here]
+SUTL::TimeUtl \- Simplified Time Utility Functions
 .SH "VERSION"
 .IX Header "VERSION"
-This document describes SUTL::TimeUtl version 0.0.1
+This document describes SUTL::TimeUtl version 0.1.0
 .SH "SYNOPSIS"
 .IX Header "SYNOPSIS"
 .Vb 1
 \&    use SUTL::TimeUtl;
+\&
+\&    my $timer = new SUTL::TimeUtl;
+\&    $timer\->set_timestamp; # set current timestamp to member variables.
+\&    $timer\->get_timestamp_str; # get timestamp YYYY\-MM\-DD format from member variables.
+\&    $timer\->start_watch; # starting inner time watch.
+\&    $timer\->stop_watch; # stopping inner time watch.
+\&    $timer\->get_proctime; # get time interval between starting and stopping time watch.
+\&
+\&    $timer\->get_current_timestamp_str; # get current timestamp instantly.
 .Ve
 .SH "DESCRIPTION"
 .IX Header "DESCRIPTION"
-.SH "INTERFACE"
-.IX Header "INTERFACE"
-.SH "DIAGNOSTICS"
-.IX Header "DIAGNOSTICS"
-.ie n .IP """Error message here, perhaps with %s placeholders""" 4
-.el .IP "\f(CWError message here, perhaps with %s placeholders\fR" 4
-.IX Item "Error message here, perhaps with %s placeholders"
-[Description of error here]
-.ie n .IP """Another error message here""" 4
-.el .IP "\f(CWAnother error message here\fR" 4
-.IX Item "Another error message here"
-[Description of error here]
-.Sp
-[Et cetera, et cetera]
-.SH "CONFIGURATION AND ENVIRONMENT"
-.IX Header "CONFIGURATION AND ENVIRONMENT"
-SUTL::TimeUtl requires no configuration files or environment variables.
+This program for calculating the date-time is just simplified utility module.
+.PP
+Example: 
+date inclement, date declement, date difference, get YYYY-MM-DD format, etc...
 .SH "DEPENDENCIES"
 .IX Header "DEPENDENCIES"
-None.
-.SH "INCOMPATIBILITIES"
-.IX Header "INCOMPATIBILITIES"
-None reported.
+Time::HiRes
+.PP
+Time::Local
 .SH "BUGS AND LIMITATIONS"
 .IX Header "BUGS AND LIMITATIONS"
 No bugs have been reported.

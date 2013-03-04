@@ -16,7 +16,7 @@ do{ my $x = [
          'recommends' => {},
          'scripts' => undef,
          'pod_files' => undef,
-         'dist_version' => 'v0.0.3',
+         'dist_version' => 'v0.1.0',
          'config_dir' => '_build',
          'sign' => undef,
          'recurse_into' => [],
@@ -64,7 +64,9 @@ do{ my $x = [
          'meta_merge' => {},
          'get_options' => {},
          'dist_version_from' => 'lib/SUTL/TimeUtl.pm',
-         '_added_to_INC' => [],
+         '_added_to_INC' => [
+                              'lib'
+                            ],
          'auto_configure_requires' => 1,
          'create_license' => undef,
          'debugger' => undef,
@@ -97,7 +99,9 @@ do{ my $x = [
          'meta_add' => {},
          'requires' => {
                          'Test::More' => 0,
-                         'version' => 0
+                         'version' => 0,
+                         'Time::Local' => 0,
+                         'Time::HiRes' => 0
                        },
          'install_path' => {},
          'pm_files' => undef,

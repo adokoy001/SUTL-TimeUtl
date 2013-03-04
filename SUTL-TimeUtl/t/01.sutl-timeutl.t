@@ -1,17 +1,11 @@
-use Test::More tests => 1;
+use Test::More tests => 2;
 use SUTL::TimeUtl;
 
-my $obj = new SUTL::TimeUtl;
+my $time = new SUTL::TimeUtl;
 
 
-my $array = $obj->get_timestamp_array;
+$time->set_timestamp;
 
-my $output_str_test = sprintf("%04d-%02d-%02d",
-			      $array->[5],
-			      $array->[4],
-			      $array->[3]
-    );
+is($time->get_current_timestamp_str,$time->get_timestamp_str);
 
-
-is($obj->get_date_str,,$output_str_test);
-
+is(join('-',$time->get_add_date_fmt(2001,1,1,2)),"2001-01-03");
