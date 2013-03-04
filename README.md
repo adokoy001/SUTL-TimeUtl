@@ -1,5 +1,7 @@
-Perl Module
-  SUTL-TimeUtl
+Perl Module [ SUTL-TimeUtl ]
+
+Simplified Utils --- Time Util
+
 
 FEATURES
 - Distributable Perl Module
